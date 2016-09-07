@@ -1,4 +1,4 @@
-package com.programming.pupper.pupper;
+package com.programming.pupper.pupper.Activities;
 
 import android.app.Activity;
 import android.support.v4.widget.DrawerLayout;
@@ -9,6 +9,9 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import com.programming.pupper.pupper.DrawerItemClickListener;
+import com.programming.pupper.pupper.R;
 
 public class MainActivity extends Activity{
     private String[] mMainDrawerItems;
