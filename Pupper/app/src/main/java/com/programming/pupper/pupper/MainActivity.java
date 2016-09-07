@@ -28,7 +28,7 @@ public class MainActivity extends Activity{
         mTitle = mDrawerTitle = getTitle();
         mMainDrawerItems = getResources().getStringArray(R.array.main_drawer_items);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, // may need R.drawable.ic_drawer
+        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, // TODO may need R.drawable.ic_drawer
                 R.string.main_drawer_open, R.string.main_drawer_close){
 
             /** Called when a drawer has settled in a completely closed state. */
@@ -66,7 +66,7 @@ public class MainActivity extends Activity{
     public boolean onPrepareOptionsMenu(Menu menu) {
         // If the nav drawer is open, hide action items related to the content view
         boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerList);
-        menu.findItem(R.id.action_websearch).setVisible(!drawerOpen);
+        // TODO menu.findItem(R.id.action_websearch).setVisible(!drawerOpen);
         return super.onPrepareOptionsMenu(menu);
     }
 
