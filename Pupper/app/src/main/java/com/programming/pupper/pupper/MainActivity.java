@@ -28,6 +28,8 @@ public class MainActivity extends Activity{
         mTitle = mDrawerTitle = getTitle();
         mMainDrawerItems = getResources().getStringArray(R.array.main_drawer_items);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if(mDrawerLayout == null)
+            return;
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, // TODO may need R.drawable.ic_drawer
                 R.string.main_drawer_open, R.string.main_drawer_close){
 
@@ -45,12 +47,10 @@ public class MainActivity extends Activity{
                 invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
             }
         };
-
-        // TODO deprecated
-        // Set the drawer toggle as the DrawerListener
-        mDrawerLayout.setDrawerListener(mDrawerToggle);
-
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
+
+        // Set the drawer toggle as the DrawerListener
+        mDrawerLayout.addDrawerListener(mDrawerToggle);
 
         // Set the adapter for the list view
         mDrawerList.setAdapter(new ArrayAdapter<String>(this,
