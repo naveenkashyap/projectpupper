@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string-array name="main_drawer_items">
-        <item>Home</item>
-        <item>Profile</item>
-        <item>My Parks</item>
-        <item>Support</item>
-    </string-array>
-</resources>
